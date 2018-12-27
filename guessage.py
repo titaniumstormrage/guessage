@@ -3,8 +3,8 @@ This program came to be as a joke on a twitch stream (https://www.twitch.tv/clar
 On that stream there's a command called !guessage which basically "guesses" Claras age
 We tried to get the age 1337 but we had to give up since it disrupted the stream
 I didn't want to give up so I wrote this little thing
-Later on (before pushing it onto github) I also wrote it a GUI
-(I know my code is pretty lousy here but meh it's 3am rn so frankly I don't really care)
+Later on (just before pushing it onto github) I also wrote it a GUI
+(I know my code is pretty lousy here but meh it's 3am rn so frankly I don't care)
 Also anyone that sees this can use this code as they see fit I don't really care how people use this one.
 '''
 #Importing the modules
