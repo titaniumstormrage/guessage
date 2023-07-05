@@ -8,8 +8,8 @@ Later on (just before pushing it onto github) I also wrote it a GUI
 Also anyone that sees this can use this code as they see fit I don't really care how people use this one.
 '''
 #Importing the modules
-from time import perf_counter
-from random import randint
+from time import perf_counter, sleep
+from random import seed, randint
 from tkinter import Tk, Label, Button, END
 import tkinter.scrolledtext as tkst
 
@@ -23,6 +23,7 @@ def scrollbox_insert(message):
 
 #Generates the age
 def guessage():
+        seed()
         years = 0
         age = 0
         lines = 0
@@ -34,15 +35,16 @@ def guessage():
         start_button.configure(state='disabled')
         
         while age == 0:
+                sleep(0.01)
                 #Generates the years
                 if years != 1337:
                         years = randint(1, 9999)
-                        scrollbox_insert("I guess Clara is " + str(years) + " years old?")
+                        scrollbox_insert(f"I guess Clara is {years} years old?")
                         lines = lines + 1
                 #If desired year is achived prints the total of years needed to reach that point
                 else:
-                        scrollbox_insert("It took " + str(lines) + " tries to get the legendary age!")
-                        scrollbox_insert("Time: " + str(perf_counter() - start_time) + " seconds!")
+                        scrollbox_insert(f"It took {lines} tries to get the legendary age!")
+                        scrollbox_insert(f"Time: {perf_counter() - start_time} seconds!")
                         age = 1
 
         #Enables the button again
@@ -52,7 +54,7 @@ def guessage():
 #Generates the GUI
 root = Tk()
 root.title("G U E S S   A G E !")
-root.geometry("750x210")
+root.geometry("800x210")
 root.resizable(0, 0)
 
 #Text
